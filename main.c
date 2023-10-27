@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 #define TAMANHO_VET 10000
 
@@ -47,7 +48,19 @@ int *copiarVetor(int vet[], int tamanho) {
 }
 
 void bubbleSort(int v[], int tam) {
-
+    int i, fim = tam-1, chave;
+    bool troca = true;
+    while (troca){
+        troca = false;
+        for (i = 0; i < fim; i++) {
+            if (v[i] > v[i+1]){
+                chave = v[i];
+                v[i] = v[i+1];
+                v[i+1] = chave;
+                troca = true;
+            }
+        }
+    }
 }
 
 void insertionSort(int v[], int n) {
