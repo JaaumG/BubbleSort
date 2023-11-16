@@ -1,2 +1,1 @@
-# BubbleSort
-BubbleSort Algorithm develop in C 
+# Sorting Algorithms in C
