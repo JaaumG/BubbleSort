@@ -64,7 +64,16 @@ void bubbleSort(int v[], int tam) {
 }
 
 void insertionSort(int v[], int n) {
-
+    int i, j, chave;
+    for (i = 1; i < n; i++) {
+        chave = v[i];
+        j = i - 1;
+        while (j >= 0 && v[j] > chave) {
+            v[j + 1] = v[j];
+            j--;
+        }
+        v[j + 1] = chave;
+    }
 }
 
 int main(int argc, char *argv[]) {
